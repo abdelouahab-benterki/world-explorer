@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Normalize Css-->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!--Google Fonts (nunito)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Main Css-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./imgs/logo.svg" alt="logo" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Countries</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Countries</h1>
+        <form action="get">
+          <select name="country" id="country">
+            <option disabled selected value="">-- Select a country</option>
+          </select>
+          <input type="submit" value="Go!!" class="country-go" />
+        </form>
+        <div class="infos">
+          <div class="flags">
+            <div class="flag">
+              <img src="" alt="" />
+            </div>
+            <div class="slogan">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="info-container">
+            <ul>
+              <li>Official Name: <span class="official-name"></span></li>
+              <li>Capital: <span class="capital"></span></li>
+              <li>Currencies: <span class="currencies"></span></li>
+              <li>Continent: <span class="continent"></span></li>
+              <li>Borders: <span class="borders"></span></li>
+              <li>Languages: <span class="languages"></span></li>
+              <li>Time Zone: <span class="time-zone"></span></li>
+              <li>Map: <a href="" class="map">Click here!</a>,</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

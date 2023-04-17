@@ -1,0 +1,185 @@
+/* start general rules */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #fffcef;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+/* end general rules */
+
+/* Start header */
+
+header {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.63);
+  transition: color 0.3s;
+  position: relative;
+}
+
+header nav ul li a::after {
+  content: "";
+  width: 10%;
+  height: 1.5px;
+  background-color: rgba(0, 0, 0, 0.63);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+
+header nav ul li a:hover {
+  color: black;
+}
+
+header nav ul li a:hover::after {
+  background-color: black;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* End Header */
+
+main {
+  margin: 2rem 0;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main form {
+  text-align: center;
+}
+
+main form:first-of-type select,
+main form:first-of-type input {
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.29);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+main form:first-of-type select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  background: url("../imgs/triangle.png") no-repeat 95% white;
+  background-size: 0.8rem;
+  display: block;
+  max-height: 400px;
+}
+
+main form:first-of-type input:hover {
+  background-color: #feffda;
+}
+main .infos {
+  display: none;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+main .flags {
+  width: 90%;
+  height: 120px;
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 6fr 3fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+main .flags .flag img,
+main .flags .slogan img {
+  width: 100%;
+  height: 100%;
+}
+
+main .infos ul {
+  list-style: none;
+}
+
+main .infos ul li {
+  margin: 1rem 0;
+}
+
+.info-container {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  main .flags {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  main form:first-of-type select {
+    display: inline-block;
+    width: 400px;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  main .flags {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  main .flags {
+    width: 40%;
+  }
+}
+
+/* Start main */
